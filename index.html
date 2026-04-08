@@ -1,73 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>Portfólio - David Alex dos Santos</title>
-<style>
-body{
-font-family: Arial;
-background:#0f172a;
-color:white;
-text-align:center;
-padding:40px;
-}
-.card{
-background:#1e293b;
-padding:20px;
-margin:20px auto;
-border-radius:10px;
-max-width:500px;
-
-opacity:0;
-transform:translateY(20px);
-animation:fadeUp 1s forwards;
-}
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicolas Limão — Desenvolvedor & Analista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<h1>Deivin - Cloud & Infra</h1>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">NL<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<p>Profissional de TI focado em Cloud, Monitoramento e Automação.</p>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag reveal">// analista &amp; desenvolvedor</p>
+      <h1 class="hero-title reveal">
+        Nicolas<br /><span class="hero-name-accent">Limão</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Transformando ideias em experiências digitais.<br />
+        Explorando automações com IA &amp; N8N.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projetos" class="btn-primary">Ver Projetos</a>
+        <a href="#contato" class="btn-outline">Entrar em Contato</a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/NicolasLimao" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .269.18.579.688.482C19.138 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nicolas-lim%C3%A3o-190690189/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/nicoolaslimao/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Projeto 1</h2>
-<p>Zabbix monitorando infraestrutura AWS.</p>
-</div>
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 — sobre</span>
+        <h2>Quem sou eu</h2>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-text reveal">
+          <p>
+            Sou <strong>Nicolas Limão</strong>, analista de suporte júnior na <span class="highlight">Ikatec</span>
+            e desenvolvedor web apaixonado por criar soluções digitais que fazem a diferença.
+          </p>
+          <p>
+            Cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Uninove,
+            estou constantemente expandindo meu repertório técnico — atualmente mergulhado
+            no universo de <span class="highlight">automações com IA e N8N</span>.
+          </p>
+          <p>
+            Acredito que tecnologia bem aplicada transforma negócios. Cada projeto que desenvolvo
+            carrega essa filosofia: simples na experiência, poderoso por baixo.
+          </p>
+          <div class="sobre-details">
+            <div class="detail-item">
+              <span class="detail-label">// localização</span>
+              <span class="detail-value">Brasil</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">// empresa</span>
+              <span class="detail-value">Ikatec</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">// formação</span>
+              <span class="detail-value">ADS — Uninove</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">// foco atual</span>
+              <span class="detail-value">IA & Automações</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-visual reveal">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="terminal-title">nicolas.json</span>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="t-brace">{</span>
+  <span class="t-key">"nome"</span>: <span class="t-str">"Nicolas Limão"</span>,
+  <span class="t-key">"cargo"</span>: <span class="t-str">"Analista Suporte Jr"</span>,
+  <span class="t-key">"empresa"</span>: <span class="t-str">"Ikatec"</span>,
+  <span class="t-key">"formacao"</span>: <span class="t-str">"ADS - Uninove"</span>,
+  <span class="t-key">"habilidades"</span>: [
+    <span class="t-str">"Suporte Técnico"</span>,
+    <span class="t-str">"Desenvolvimento Web"</span>,
+    <span class="t-str">"Automação N8N"</span>,
+    <span class="t-str">"IA Aplicada"</span>
+  ],
+  <span class="t-key">"status"</span>: <span class="t-str">"disponível"</span>
+<span class="t-brace">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Projeto 2</h2>
-<p>Dashboard Grafana para análise de servidores.</p>
-</div>
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — habilidades</span>
+        <h2>O que eu sei fazer</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg>
+          </div>
+          <h3>Desenvolvimento Web</h3>
+          <p>Criação de sites e aplicações web, desde landing pages até sistemas completos com foco em performance e experiência do usuário.</p>
+          <ul class="skill-tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsivo</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>
+          </div>
+          <h3>Automações com IA</h3>
+          <p>Estudo e implementação de fluxos automatizados usando inteligência artificial para otimizar processos e criar soluções inteligentes.</p>
+          <ul class="skill-tags">
+            <li>N8N</li><li>IA</li><li>Automação</li><li>Workflows</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+          </div>
+          <h3>Suporte Técnico</h3>
+          <p>Análise e resolução de problemas técnicos, atendimento especializado e manutenção de sistemas com foco em agilidade e satisfação.</p>
+          <ul class="skill-tags">
+            <li>Help Desk</li><li>Análise</li><li>Troubleshooting</li><li>Documentação</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+          </div>
+          <h3>Implantação de Sites</h3>
+          <p>Hospedagem, configuração de domínios e deploy de aplicações web, garantindo disponibilidade e desempenho em produção.</p>
+          <ul class="skill-tags">
+            <li>Deploy</li><li>Hosting</li><li>DNS</li><li>Squareweb</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Projeto 3</h2>
-<p>Automação com IA integrada ao WhatsApp.</p>
-</div>
-<div class="card">
-<h2>Certificações</h2>
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — projetos</span>
+        <h2>O que eu já construí</h2>
+      </div>
+      <div class="projects-grid">
 
-<ul style="list-style:none;padding:0">
+        <div class="project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <h3>Mendes Confecções</h3>
+            <p>Site institucional e catálogo online para confecção de roupas. Desenvolvido com foco na apresentação de produtos e atração de clientes B2B e B2C.</p>
+            <ul class="project-tags">
+              <li>Web</li><li>E-commerce</li><li>Catálogo</li>
+            </ul>
+            <a href="https://mendesconfeccoes.com.br/" target="_blank" rel="noopener" class="project-link">
+              Ver projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </div>
 
-<li>🎓 AWS Cloud Practitioner (em andamento)</li>
+        <div class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <h3>NL Cupons</h3>
+            <p>Plataforma de cupons de desconto com curadoria de ofertas para os usuários. Sistema focado em conversão e experiência de compra inteligente.</p>
+            <ul class="project-tags">
+              <li>Web App</li><li>Cupons</li><li>Web</li>
+            </ul>
+            <a href="https://nlcupons.com.br/" target="_blank" rel="noopener" class="project-link">
+              Ver projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </div>
 
-<li>🎓 Cisco Cybersecurity (108h)</li>
+        <div class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <h3>JEM Ambiental</h3>
+            <p>Site institucional para empresa de gestão ambiental. Apresentação de serviços, certificações e canais de contato para clientes corporativos.</p>
+            <ul class="project-tags">
+              <li>Institucional</li><li>Ambiental</li><li>Squareweb</li>
+            </ul>
+            <a href="https://jemambiental.squareweb.app/" target="_blank" rel="noopener" class="project-link">
+              Ver projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </div>
 
-<li>🎓 Mikrotik MTCNA (28h)</li>
+      </div>
+    </div>
+  </section>
 
-<li>🎓 ITIL Foundations</li>
+  <!-- ESTUDANDO -->
+  <section id="estudando">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 — em andamento</span>
+        <h2>O que estou aprendendo</h2>
+      </div>
+      <div class="studying-grid">
+        <div class="studying-card reveal">
+          <div class="studying-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <div>
+            <h3>Automações com N8N</h3>
+            <p>Criando fluxos de trabalho automatizados integrando diversas ferramentas e APIs para eliminar tarefas repetitivas e aumentar produtividade.</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="--w: 65%"></div>
+            </div>
+            <span class="progress-label">Em progresso</span>
+          </div>
+        </div>
+        <div class="studying-card reveal">
+          <div class="studying-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>
+          </div>
+          <div>
+            <h3>Inteligência Artificial Aplicada</h3>
+            <p>Explorando como integrar IA em soluções reais: chatbots, processamento de linguagem natural e agentes autônomos para negócios.</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="--w: 50%"></div>
+            </div>
+            <span class="progress-label">Em progresso</span>
+          </div>
+        </div>
+        <div class="studying-card reveal">
+          <div class="studying-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+          </div>
+          <div>
+            <h3>ADS — Uninove</h3>
+            <p>Cursando Análise e Desenvolvimento de Sistemas, aprofundando fundamentos de programação, banco de dados, redes e engenharia de software.</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="--w: 45%"></div>
+            </div>
+            <span class="progress-label">Em andamento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<li>🎓 Zabbix Monitoramento</li>
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 — contato</span>
+        <h2>Vamos conversar</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <p>
+            Tem um projeto em mente, quer trocar uma ideia sobre tecnologia
+            ou está procurando alguém para compor seu time? Me chama!
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/NicolasLimao" target="_blank" rel="noopener" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .269.18.579.688.482C19.138 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">NicolasLimao</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/nicolas-lim%C3%A3o-190690189/" target="_blank" rel="noopener" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Nicolas Limão</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/nicoolaslimao/" target="_blank" rel="noopener" class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <div>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-value">@nicoolaslimao</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-card-inner">
+            <p class="contact-card-tag">// disponível para</p>
+            <ul class="availability-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Projetos freelance
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Consultoria técnica
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Automações com IA
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Desenvolvimento web
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                Novas oportunidades
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</ul>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">NL<span class="accent">.</span></span>
+        <p class="footer-text">Desenvolvido por Nicolas Limão &copy; 2025</p>
+        <div class="footer-socials">
+          <a href="https://github.com/NicolasLimao" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .269.18.579.688.482C19.138 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nicolas-lim%C3%A3o-190690189/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/nicoolaslimao/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-</div>
+  <script src="script.js"></script>
 </body>
 </html>
