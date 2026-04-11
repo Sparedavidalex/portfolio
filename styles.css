@@ -584,6 +584,68 @@ section:nth-child(even) { background: var(--bg-2); }
 .project-link svg { width: 14px; height: 14px; }
 .project-link:hover { gap: 12px; }
 
+
+/* =============================================
+   SKILLS SECTION (estilo moderno em grid)
+   ============================================= */
+
+#skills {
+  padding: 100px 0;
+  background: #0d1318;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.skills-subtitle {
+  font-size: 0.9rem;
+  color: #6d8494;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.skill-card {
+  background: #111820;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+  cursor: default;
+}
+
+/* HOVER */
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #2dafcc;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TITULO */
+.skill-card h3 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #2dafcc;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.skill-card p {
+  font-size: 0.75rem;
+  color: #6d8494;
+  line-height: 1.6;
+}
+
 /* =============================================
    ESTUDANDO
    ============================================= */
