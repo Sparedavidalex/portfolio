@@ -615,7 +615,16 @@ section:nth-child(even) { background: var(--bg-2); }
 }
 
 /* CARD */
-.skill-card {
+.skill-card h3 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #2dafcc;
+  margin-bottom: 10px;
+
+  word-break: break-word;
+  text-align: center;
+}
+{
   background: #111820;
   padding: 30px 20px;
   border-radius: 10px;
