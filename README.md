@@ -43,3 +43,7 @@ Sinta-se à vontade para explorar o código ou entrar em contato para oportunida
 
 ---
 *Desenvolvido com ☕ e código puro por David Santos.*
+
+## 🤝 Créditos e Inspiração
+
+Este portfólio foi construído tendo como base e inspiração o trabalho de **Nicolas Limão**. O layout e a estrutura inicial foram adaptados e personalizados por mim para refletir a minha identidade profissional, projetos e a stack técnica que utilizo no meu dia a dia.
