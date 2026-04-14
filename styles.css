@@ -509,15 +509,74 @@ section:nth-child(even) { background: var(--bg-2); }
 /* =============================================
    CERTIFICAÇÕES
    ============================================= */
+/* 1. O Grid: Trava o tamanho do card para não esticar na tela toda */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* Trava o tamanho máximo em 320px */
+  justify-content: center; /* Centraliza os cards no meio da tela */
+  gap: 32px;
+}
+
+/* 2. O Card Principal */
 .cert-card {
-  display: block; /* Adicionado */
-  text-decoration: none; /* Adicionado */
+  display: block; 
+  text-decoration: none; 
   background: var(--bg-3);
   border: 1px solid var(--border-2);
   border-radius: var(--radius);
   padding: 40px 32px;
   text-align: center;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.cert-card:hover {
+  border-color: var(--border);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* 3. A Imagem: OBRIGATÓRIO para a AWS não ficar gigante */
+.cert-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 24px auto;
+  display: block;
+}
+
+/* 4. Os Textos */
+.cert-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cert-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 5. A Setinha Solitária */
+.cert-link {
+  display: block;
+  margin-top: 16px;
+  color: var(--text-muted); /* Deixa a seta mais discreta */
+}
+
+/* Trava o tamanho exato do SVG para não bugar */
+.cert-link svg {
+  width: 22px;
+  height: 22px;
+  transition: transform var(--transition), color var(--transition);
+}
+
+/* Efeito Hover: A seta ganha o azul/ciano do seu tema e pula pro canto */
+.cert-card:hover .cert-link svg {
+  color: var(--accent);
+  transform: translateX(4px) translateY(-4px); 
 }
 
 /* =============================================
