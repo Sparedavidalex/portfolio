@@ -509,50 +509,16 @@ section:nth-child(even) { background: var(--bg-2); }
 /* =============================================
    CERTIFICAÇÕES
    ============================================= */
-.cert-grid {
-  display: grid;
-  /* Cria colunas responsivas automaticamente */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 32px;
-}
-
 .cert-card {
+  display: block; /* Adicionado */
+  text-decoration: none; /* Adicionado */
   background: var(--bg-3);
   border: 1px solid var(--border-2);
   border-radius: var(--radius);
   padding: 40px 32px;
-  text-align: center; /* Centraliza a imagem e o texto */
+  text-align: center;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
-
-.cert-card:hover {
-  border-color: var(--border);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-}
-
-.cert-card img {
-  width: 130px; /* Tamanho ideal para o selo */
-  height: 130px;
-  object-fit: contain;
-  margin: 0 auto 24px auto; /* Centraliza a imagem e dá espaço embaixo */
-  display: block;
-}
-
-.cert-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.cert-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
 
 /* =============================================
    PROJETOS
