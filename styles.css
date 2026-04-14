@@ -848,7 +848,26 @@ section:nth-child(even) { background: var(--bg-2); }
   color: var(--petrol-lt);
   flex-shrink: 0;
 }
+.email-link {
+    color: #2dafcc; /* O tom de azul ciano que destaca no seu tema */
+    text-decoration: none;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.email-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #2dafcc; /* Efeito de brilho neon no hover */
+    transform: translateY(-2px);
+}
+
+.email-link i {
+    font-size: 1.2rem;
+}
 /* =============================================
    FOOTER
    ============================================= */
