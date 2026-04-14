@@ -509,23 +509,22 @@ section:nth-child(even) { background: var(--bg-2); }
 /* =============================================
    CERTIFICAÇÕES
    ============================================= */
-/* 1. O Grid: Trava o tamanho do card para não esticar na tela toda */
+/* O SEU GRID ORIGINAL */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* Trava o tamanho máximo em 320px */
-  justify-content: center; /* Centraliza os cards no meio da tela */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 32px;
 }
 
-/* 2. O Card Principal */
+/* O SEU CARD ORIGINAL */
 .cert-card {
-  display: block; 
-  text-decoration: none; 
+  display: block;         /* NOVO: Faz o link <a> agir como o antigo <div> */
+  text-decoration: none;  /* NOVO: Evita que o texto fique sublinhado */
   background: var(--bg-3);
   border: 1px solid var(--border-2);
   border-radius: var(--radius);
   padding: 40px 32px;
-  text-align: center;
+  text-align: center; 
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
@@ -535,16 +534,16 @@ section:nth-child(even) { background: var(--bg-2); }
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
-/* 3. A Imagem: OBRIGATÓRIO para a AWS não ficar gigante */
+/* A SUA IMAGEM ORIGINAL */
 .cert-card img {
-  width: 130px;
+  width: 130px; 
   height: 130px;
   object-fit: contain;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 24px auto; 
   display: block;
 }
 
-/* 4. Os Textos */
+/* OS SEUS TEXTOS ORIGINAIS */
 .cert-card h3 {
   font-family: var(--font-serif);
   font-size: 1.15rem;
@@ -559,26 +558,23 @@ section:nth-child(even) { background: var(--bg-2); }
   line-height: 1.6;
 }
 
-/* 5. A Setinha Solitária */
+/* NOVO: TRAVA PARA A SETINHA NÃO EXPLODIR O LAYOUT */
 .cert-link {
   display: block;
   margin-top: 16px;
-  color: var(--text-muted); /* Deixa a seta mais discreta */
+  color: var(--text-muted);
 }
 
-/* Trava o tamanho exato do SVG para não bugar */
 .cert-link svg {
-  width: 22px;
+  width: 22px; /* Aqui é onde a mágica acontece para o ícone não ficar gigante */
   height: 22px;
   transition: transform var(--transition), color var(--transition);
 }
 
-/* Efeito Hover: A seta ganha o azul/ciano do seu tema e pula pro canto */
 .cert-card:hover .cert-link svg {
   color: var(--accent);
   transform: translateX(4px) translateY(-4px); 
 }
-
 /* =============================================
    PROJETOS
    ============================================= */
