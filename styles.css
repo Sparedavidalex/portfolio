@@ -396,6 +396,47 @@ section:nth-child(even) { background: var(--bg-2); }
   color: var(--text);
 }
 
+/* botão CV*/
+
+/* Estilo do Botão de Download */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 12px 28px;
+  font-family: var(--font-mono); /* Fonte de terminal se você tiver, senão use a padrão */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent); /* Cor do texto e da borda */
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+/* Tamanho do ícone de setinha */
+.btn-download svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition);
+}
+
+/* Efeito Hover (Quando passa o mouse) */
+.btn-download:hover {
+  background: var(--accent);
+  color: var(--bg-1); /* Fica com o fundo colorido e a letra escura */
+  box-shadow: 0 0 15px rgba(45, 175, 204, 0.4); /* Adapte o RGB para a sua cor var(--accent) */
+  transform: translateY(-2px);
+}
+
+/* Faz a setinha pular para baixo no hover */
+.btn-download:hover svg {
+  transform: translateY(3px);
+}
+
 /* Terminal card */
 .terminal-card {
   background: var(--bg-3);
