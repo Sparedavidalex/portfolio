@@ -619,125 +619,13 @@ section:nth-child(even) { background: var(--bg-2); }
 /* =============================================
    PROJETOS
    ============================================= */
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px; /* Espaço entre os projetos */
-}
+.project-list { display: flex; flex-direction: column; gap: 16px; /* Espaço entre os projetos */ } 
 
-/* O card vira um link blocão */
-.project-list-card {
-  display: grid;
-  grid-template-columns: 200px 1fr; /* Imagem esquerda, texto direita */
-  gap: 32px;
-  align-items: start;
-  padding: 32px;
-  border-radius: var(--radius);
-  background: transparent;
-  transition: all 0.3s ease;
-  text-decoration: none; /* Tira o sublinhado padrão de links */
-}
+/* O card vira um link blocão */ .project-list-card { display: grid; grid-template-columns: 200px 1fr; /* Imagem esquerda, texto direita */ gap: 32px; align-items: start; padding: 32px; border-radius: var(--radius); background: transparent; transition: all 0.3s ease; text-decoration: none; /* Tira o sublinhado padrão de links */ } 
 
-/* Efeito de Hover igual ao print (fundo acende levemente) */
-.project-list-card:hover {
-  background: rgba(45, 175, 204, 0.05); /* Um azul petróleo bem transparente */
-  box-shadow: inset 0 0 0 1px rgba(45, 175, 204, 0.1);
-}
+/* Efeito de Hover igual ao print (fundo acende levemente) */ .project-list-card:hover { background: rgba(45, 175, 204, 0.05); /* Um azul petróleo bem transparente */ box-shadow: inset 0 0 0 1px rgba(45, 175, 204, 0.1); } 
 
-/* Imagem da Esquerda */
-.project-list-image {
-  width: 100%;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid var(--border-2);
-  background: var(--bg-3);
-}
-
-.project-list-image img {
-  width: 100%;
-  height: 180px;
-  aspect-ratio: 16 / 9; /* Mantém proporção de tela */
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-  opacity: 0.8; /* Deixa a imagem um pouco apagada no estado normal */
-}
-
-.project-list-card:hover {
-  background: rgba(45, 175, 204, 0.06);
-   backdrop-filter: blur(8px);
-   
-  box-shadow:
-    inset 0 0 0 1px rgba(45, 175, 204, 0.12),
-    0 10px 30px rgba(0, 0, 0, 0.25);
-
-  transform: translateY(-2px);
-}
-
-/* Título e Ícone de Link Externo */
-.project-list-title {
-  font-family: var(--font-mono); /* Ou var(--font-serif) se preferir */
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s ease;
-}
-
-.external-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0;
-  transform: translateY(4px) translateX(-4px);
-  transition: all 0.3s ease;
-}
-
-/* Quando passa o mouse, a setinha aparece voando */
-.project-list-card:hover .external-icon {
-  opacity: 1;
-  transform: translateY(0) translateX(0);
-}
-
-/* Descrição */
-.project-list-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* As Pílulas de Tecnologia (Tags) */
-.project-list-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.project-list-tags li {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--accent); /* Cor do texto (Ciano) */
-  background: rgba(45, 175, 204, 0.1); /* Fundo ciano transparente */
-  padding: 6px 14px;
-  border-radius: 50px; /* Deixa bem arredondado igual o print */
-}
-
-/* Responsivo para Celular */
-@media (max-width: 768px) {
-  .project-list-card {
-    grid-template-columns: 1fr; /* Empilha: Imagem em cima, texto embaixo */
-    gap: 20px;
-    padding: 24px 16px;
-  }
-  
-  .project-list-image {
-    max-width: 100%; /* A imagem ocupa toda a largura no celular */
-  }
-}
-
+/* Imagem da Esquerda */ .project-list-image { width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-2); background: var(--bg-3); } .project-list-image img { width: 100%; height: auto; aspect-ratio: 16 / 9; /* Mantém proporção de tela */ object-fit: cover; display: block; transition: transform 0.4s ease; opacity: 0.8; /* Deixa a imagem um pouco apagada no estado normal */ } .project-list-card:hover .project-list-image img { transform: scale(1.05); /* Zoom sutil na imagem */ opacity: 1; /* Acende a imagem no hover */ } /* Título e Ícone de Link Externo */ .project-list-title { font-family: var(--font-mono); /* Ou var(--font-serif) se preferir */ font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s ease; } .external-icon { width: 16px; height: 16px; opacity: 0; transform: translateY(4px) translateX(-4px); transition: all 0.3s ease; } /* Quando passa o mouse, a setinha aparece voando */ .project-list-card:hover .external-icon { opacity: 1; transform: translateY(0) translateX(0); } /* Descrição */ .project-list-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; } /* As Pílulas de Tecnologia (Tags) */ .project-list-tags { display: flex; flex-wrap: wrap; gap: 10px; } .project-list-tags li { font-size: 0.75rem; font-weight: 600; color: var(--accent); /* Cor do texto (Ciano) */ background: rgba(45, 175, 204, 0.1); /* Fundo ciano transparente */ padding: 6px 14px; border-radius: 50px; /* Deixa bem arredondado igual o print */ } /* Responsivo para Celular */ @media (max-width: 768px) { .project-list-card { grid-template-columns: 1fr; /* Empilha: Imagem em cima, texto embaixo */ gap: 20px; padding: 24px 16px; } .project-list-image { max-width: 100%; /* A imagem ocupa toda a largura no celular */ } }
 /* =============================================
    ESTUDANDO
    ============================================= */
