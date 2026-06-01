@@ -5,6 +5,24 @@ const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
+
+/* =============================================
+   CERTIFICADOS - Abas simples
+   ============================================= */
+const tabButtons = document.querySelectorAll('.tab-btn');
+if (tabButtons.length) {
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        if (panel.id === target) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      });
+    });
+  });
+}
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
