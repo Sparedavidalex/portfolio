@@ -617,6 +617,33 @@ section:nth-child(even) { background: var(--bg-2); }
   transform: translateX(4px) translateY(-4px); 
 }
 /* =============================================
+   CERTIFICAÇÕES - ABAS
+   ============================================= */
+.cert-tabs-nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+.tab-btn:hover { transform: translateY(-2px); }
+.tab-btn.active {
+  background: rgba(45, 175, 204, 0.06);
+  color: var(--accent);
+  border-color: var(--border);
+}
+.tab-panel[hidden] { display: none; }
+.cert-empty { color: var(--text-muted); padding: 28px 0; }
+/* =============================================
    PROJETOS
    ============================================= */
 .project-list { display: flex; flex-direction: column; gap: 16px; /* Espaço entre os projetos */ } 
